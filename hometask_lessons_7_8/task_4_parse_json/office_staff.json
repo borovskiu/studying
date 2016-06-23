@@ -1,0 +1,38 @@
+[
+{
+		"id" : "1",
+		"name" : "Ivanov Ivan",
+		"age" : "26",
+		"profession" : "developer C#"
+	},
+	{
+		"id" : "2",
+		"name" : "Stepan Shevchenko",
+		"age" : "31",
+		"profession" : "qa"
+	},
+	{
+		"id" : "3",
+		"name" : "Alexey Smirnov",
+		"age" : "31",
+		"profession" : "designer"
+	},
+	{
+		"id" : "4",
+		"name" : "Alex Morozov",
+		"age" : "41",
+		"profession" : "developer Java"
+	},
+	{
+		"id" : "5",
+		"name" : "Victor Dimov",
+		"age" : "31",
+		"profession" : "qa"
+	},
+	{
+		"id" : "6",
+		"name" : "Olga Timchenko",
+		"age" : "43",
+		"profession" : "manager"
+	}
+]
