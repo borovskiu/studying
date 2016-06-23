@@ -20,14 +20,11 @@ public class Task_4_parse_json {
 		InputStream input = new FileInputStream("src/office_staff.json");
 		ObjectMapper objectMapper = new ObjectMapper();
 		objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-		objectMapper
-				.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
+		objectMapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
 		TypeFactory typeFactory = TypeFactory.defaultInstance();
 		
 		
-		List<Office_staff> office = objectMapper.readValue(input,
-				typeFactory.constructCollectionType(
-						ArrayList.class, Office_staff.class));
+		List<Office_staff> office = objectMapper.readValue(input,typeFactory.constructCollectionType(ArrayList.class, Office_staff.class));
 		
 		for(int i = 0; i<office.size(); i++)
 		{
@@ -54,7 +51,7 @@ public class Task_4_parse_json {
 
 	@JsonCreator
 	public Office_staff(@JsonProperty("id") int id, @JsonProperty("name") String name, 
-			@JsonProperty("age") int age, @JsonProperty("profession") String profession)
+		@JsonProperty("age") int age, @JsonProperty("profession") String profession)
 
 		{
 		this.id = id;
