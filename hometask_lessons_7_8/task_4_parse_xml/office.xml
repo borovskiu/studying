@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<class>
+   <worker id="1">
+      <name>Ivanov</name>
+      <company>TrueSoft</company>
+      <position>developer</position>
+      <salary>85000</salary>
+   </worker>
+   <worker id="2">
+      <name>Petrov</name>
+      <company>TrueSoft</company>
+      <position>qa</position>
+      <salary>70000</salary>
+   </worker>
+   <worker id="3">
+      <name>Shevchenko</name>
+      <company>TrueSoft</company>
+      <position>manager</position>
+      <salary>75000</salary>
+   </worker>
+</class>
+
