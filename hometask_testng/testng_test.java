@@ -19,11 +19,6 @@ import org.testng.annotations.Test;
 
 public class testng_hometask {
 
-	public boolean results(boolean result)
-	{
-		return result;
-	} 
-	
 	@Test
 	public static void main(String [] args) throws ClientProtocolException,
 			IOException, ParseException {
