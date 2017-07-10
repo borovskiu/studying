@@ -1,0 +1,47 @@
+package AdminPortal;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LoginPage {
+	WebDriver driver;
+	By loginField = By.name("username");
+	By passField = By.name("password");
+	By subBtn = By.xpath("/html/body/div/div/div/div/form/div/input[3]");
+	By logo = By.xpath("/html/body/div/div/div/div/center/img");
+	By dangerAlert = By.className("txt-danger");
+	
+	
+	public LoginPage(WebDriver driver){
+		this.driver = driver;
+	}
+	
+	public LoginPage logining(String login, String pass){
+		driver.findElement(loginField).sendKeys(login);
+		driver.findElement(passField).sendKeys(pass);
+		driver.findElement(subBtn).click();
+		return this;
+	}
+	
+	
+	// Поиск алерта с сообщением о введенном некорректном логине/пароле
+	public WebElement alertAuth(){
+		WebElement alert = driver.findElement(dangerAlert);
+		return alert;
+	}
+	
+	// Поиск элементов страницы
+	public List <WebElement> elems(){
+		List <WebElement> list = new ArrayList();
+		list.add(0, driver.findElement(loginField));
+		list.add(1, driver.findElement(passField));
+		list.add(2, driver.findElement(subBtn));
+		list.add(3, driver.findElement(logo));
+		return list;
+	}
+
+}
